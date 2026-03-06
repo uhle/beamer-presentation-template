@@ -11,18 +11,12 @@
 \usepackage[babel]{csquotes}
 \usepackage[american]{isodate}
 
-% replicate default Fira font from metropolis (as recommended by Moloch documentation)
-\usepackage{fontspec}
-\setsansfont[
-  ItalicFont={Fira Sans Light Italic},
-  BoldFont={Fira Sans},
-  BoldItalicFont={Fira Sans Italic}
-]{Fira Sans Light}
-\setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}
+% set Fira Sans as default font to replicate metropolis
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault,lining]{FiraSans}
+\usepackage[lining]{FiraMono}
 
-\AtBeginEnvironment{tabular}{%
-  \addfontfeature{Numbers={Monospaced}}
-}
+\AtBeginEnvironment{tabular}{\firatabular}
 
 \usetheme[progressbar=frametitle]{moloch}
 
