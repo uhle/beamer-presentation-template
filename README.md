@@ -4,8 +4,8 @@ the [metropolis theme](https://github.com/matze/mtheme) is no longer maintained
 and several issues emerged throughout the years (even to the extend that beamer
 itself had to implement several patches to stop the theme from breaking). The 
 [moloch theme](https://github.com/jolars/moloch), a fork of metropolis, aims to 
-fix most of these problems, while also simplifying the code. As I hope that this theme
-be more robust and more frequently maintained, I transferred Karl's template
+fix most of these problems, while also simplifying the code. As I hope that it 
+will be more robust and maintained for longer, I transferred Karl's template
 to the moloch theme, trying to make as little changes as possible.
 
 # Clean and Simple Beamer Presentation Template
@@ -40,39 +40,15 @@ with the template and initialize a new Git repository.
 bash mkbeamerprsentation.sh name-of-the-paper-directory
 ```
 
-The file `presentation.tex` is the main file that needs to be compiled. It is
-recommended to use `lualatex`, if you want to use the Fira fonts. These were
-the default in the metropolis theme, however, the moloch theme disabled these font
-settings, to be independent of the compiler. This template replicates the metropolis
-fonts as follows:
-```latex
-\usepackage{fontspec}
-
-\setsansfont[
-  ItalicFont={Fira Sans Light Italic},
-  BoldFont={Fira Sans},
-  BoldItalicFont={Fira Sans Italic}
-]{Fira Sans Light}
-\setmonofont[BoldFont={Fira Mono Medium}]{Fira Mono}
-
-\AtBeginEnvironment{tabular}{%
-  \addfontfeature{Numbers={Monospaced}}
-}
-```
-
 ## Requirements
-Make sure that you have a LaTeX installation on your computer, which includes
-the [moloch theme](https://ctan.org/pkg/moloch). It should
-be included in every popular LaTeX distribution like TeX live or MiKTeX.
-
-If you want to use the [Fira fonts](https://github.com/mozilla/Fira), you need
-to install them on your machine first.
-
+Make sure that you have a LaTeX installation on your computer that includes
+the [moloch theme](https://ctan.org/pkg/moloch) and the
+[Fira fonts](https://ctan.org/pkg/fira). The packages should both be available
+in every popular LaTeX distribution such as TeX Live or MiKTeX.
 
 # Usage
-The file `presentation.tex` is the main file that needs to be compiled. It is
-recommended to use `lualatex`, if you want to use the Fira fonts that are the
-default fonts in the metropolis theme.
+The file `presentation.tex` is the main file to be compiled. You could either
+use `lualatex` or `pdflatex` to compile the slides.
 
 
 # Customization
