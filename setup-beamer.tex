@@ -4,6 +4,8 @@
 \setbeamerfont{description item}{series=\mdseries}
 \setbeamerfont{alerted text}{series=\bfseries\boldmath}
 
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
 % See https://tex.stackexchange.com/a/396754/28146
 % Warning: font size for footnote set statically
 \makeatletter
@@ -22,10 +24,10 @@
   {\usebibmacro{hypercite}}
   {}
   {\usebibmacro{cite:dump}}
+\makeatother
 
 % Redefine the \footfullcite command to use the reference number
 \renewcommand{\footfullcite}[1]{\cite{#1}\hypercite{#1}}
-\makeatother
 
 
 \setbeamertemplate{title page}{
