@@ -2,6 +2,7 @@
 \documentclass[
 	english,
 	sections numbered,
+	noamssymb,
 	xcolor=dvipsnames,
 	aspectratio=169,
 ]{beamer}
@@ -20,20 +21,19 @@
 
 \usetheme[progressbar=frametitle]{moloch}
 
+%%% MATH & SCIENCE %%%
+\usepackage[amsthm,stix2,slantedGreek,scaled=1.1]{newtxmath}
+\usepackage{siunitx}
+\usepackage{bm}
+\usepackage{mathtools}
+
+% define \mathds for backward compatibility reason
+\let\mathds\varmathbb
+
 %%% GRAPHICS %%%
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage{tikz}
-
-%%% MATH & SCIENCE %%%
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{siunitx}
-\usepackage{bm}
-\usepackage{dsfont}
-\usepackage{mathtools}
 
 %%% FLOATS %%%
 \usepackage{booktabs}
