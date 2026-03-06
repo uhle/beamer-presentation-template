@@ -42,9 +42,11 @@ bash mkbeamerprsentation.sh name-of-the-paper-directory
 
 ## Requirements
 Make sure that you have a LaTeX installation on your computer that includes
-the [moloch theme](https://ctan.org/pkg/moloch) and the
-[Fira fonts](https://ctan.org/pkg/fira). The packages should both be available
-in every popular LaTeX distribution such as TeX Live or MiKTeX.
+the [moloch theme](https://ctan.org/pkg/moloch), the
+[Fira fonts](https://ctan.org/pkg/fira), and the
+[newtx font package](https://ctan.org/pkg/newtx) as well as the
+[newtxsf font package](https://ctan.org/pkg/newtxsf). The packages should all
+be available in every popular LaTeX distribution such as TeX Live or MiKTeX.
 
 # Usage
 The file `presentation.tex` is the main file to be compiled. You could either

@@ -2,6 +2,7 @@
 \documentclass[
 	english,
 	sections numbered,
+	noamssymb,
 	xcolor=dvipsnames,
 	aspectratio=169,
 ]{beamer}
@@ -13,27 +14,28 @@
 
 % set Fira Sans as default font to replicate metropolis
 \usepackage[T1]{fontenc}
-\usepackage[sfdefault,lining]{FiraSans}
-\usepackage[lining]{FiraMono}
+\usepackage[sfdefault,lining,type1]{FiraSans}
+\usepackage[lining,type1]{FiraMono}
 
 \AtBeginEnvironment{tabular}{\firatabular}
 
 \usetheme[progressbar=frametitle]{moloch}
 
+%%% MATH & SCIENCE %%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[slantedGreek,scaled=1.15]{newtxsf}
+\usepackage{siunitx}
+\usepackage{bm}
+\usepackage{mathtools}
+
+% define \mathds for backward compatibility reason
+\let\mathds\varmathbb
+
 %%% GRAPHICS %%%
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage{tikz}
-
-%%% MATH & SCIENCE %%%
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{siunitx}
-\usepackage{bm}
-\usepackage{dsfont}
-\usepackage{mathtools}
 
 %%% FLOATS %%%
 \usepackage{booktabs}
